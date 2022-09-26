@@ -1,0 +1,310 @@
+/* INICIO RESET */
+:root {
+    --oscuro: #4c394e;
+    --claro: #f0f0f0;
+    --white: #fff;
+    --negro: #403042;
+    --button: #10bbd5;
+    --tipo-principal: Helvetica, Arial, sans-serif;
+    --tipo-secundaria: Verdana;
+    --principal-size: .8em;
+}
+  
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --oscuro: #f0f0f0;
+      --claro: #403042;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      -webkit-animation: none !important;
+              animation: none !important;
+      -webkit-transition: none !important;
+      transition: none !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* border: 1px solid red; */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+  
+p a {
+    display: inline;
+}
+  
+li {
+    list-style-type: none;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+  
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+::-moz-selection {
+    background-color: #FF0072;
+    color: var(--white);
+}
+
+::selection {
+    background-color: #FF0072;
+    color: var(--white);
+}
+
+form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+}
+  
+table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+  
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--oscuro);
+    background-color: var(--claro);
+}
+/* FIN RESET */
+
+/* INICIO HEADER */
+header {
+    width: 100%;
+}
+
+header div.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+}
+
+header div.contenedor .heading {
+    max-height: 45px;
+    background-color: var(--negro);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 10px;
+}
+
+.heading p, .heading i {
+    color: var(--white);
+}
+
+header div.contenedor .heading a img {
+    max-height: 45px;
+}
+
+.contenedor .search-tool {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--oscuro);
+    padding: 5px 10px;
+}
+
+.contenedor .search-tool .search-bar {
+    height: 100%;
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.contenedor .search-tool .search-bar input {
+    background: var(--white);
+    flex: 1;
+    border: 0;
+    outline: none;
+    color: var(--oscuro);
+}
+
+::placeholder {
+    color: var(--oscuro);
+    padding: 10px;
+    font-size: var(--principal-size);
+}
+
+.contenedor .search-tool .search-bar button {
+    background: var(--button);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px 7px;
+    color: var(--white);
+}
+
+.contenedor .shipping, section.login button {
+    height: 30px;
+    width: 100%;
+    background: var(--button);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor .shipping p {
+    margin-left: 10px;
+    font-size: var(--principal-size);
+}
+/* FIN HEADER */
+
+section.login {
+    max-width: 600px;
+    background: var(--white);
+    padding: 20px 40px;
+    margin: 5px auto; 
+}
+
+section.login h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section.login a p {
+    font-size: var(--principal-size);
+    text-align: right;
+    margin: 10px 0 20px 0;
+}
+
+.login .info {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid var(--oscuro);
+    margin: 10px 0;
+}
+
+.checkbox .show-pass, .checkbox .remind-me {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+    font-size: var(--principal-size);
+}
+
+#show-pass, #remind-me {
+    margin-right: 10px;
+}
+
+.social-networks {
+    height: 60px;
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--oscuro);
+    gap: 10px;
+}
+
+.social-networks .icons-container {
+    letter-spacing: 10px;
+}
+
+/* INICIO FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    background: var(--oscuro);
+    color: var(--white);
+    padding: 10px;
+}
+
+.footing {
+    padding: 0 5%;
+}
+
+.footing h2 {
+    font-weight: bold;
+    margin: 15px
+    0;
+}
+
+.footing a {
+    font-size: var(--principal-size);
+    border-bottom: 1px solid var(--claro);
+    line-height: 1.5em;
+    padding: 10px 0;
+}
+.color-change {
+    color: #FF0072;
+}
+/* FIN FOOTER */
+
+@media only screen and (max-width: 617px) {
+    footer {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    footer a:not(.mobile-yes), footer h2:not(.mobile-yes) {
+        display: none;
+    }
+    
+    footer .mobile-yes {
+        display: inline;
+    }
+
+    .footing p {
+        margin: 10px 0;
+    }
+
+    .footing a {
+        border: none;
+    }
+}
