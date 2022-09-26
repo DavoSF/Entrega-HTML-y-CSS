@@ -137,7 +137,12 @@ header div.contenedor .heading {
     padding: 4px 10px;
 }
 
-.heading p, .heading i {
+.heading .fa-book{
+    color: var(--button);
+ }
+
+ .heading p, .heading i {
+    display: inline-block;
     color: var(--white);
 }
 
@@ -201,6 +206,17 @@ header div.contenedor .heading a img {
     font-size: var(--principal-size);
 }
 /* FIN HEADER */
+body {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: space-between;
+}
+
+main {
+    padding: 15px 10px;
+}
+
 section.signup {
     max-width: 600px;
     background: var(--white);
@@ -254,7 +270,7 @@ section.signup h1 {
 }
 
 /* INICIO FOOTER */
-footer {
+.footer {
     display: flex;
     justify-content: center;
     background: var(--oscuro);

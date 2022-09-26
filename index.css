@@ -137,7 +137,12 @@ body {
         padding: 4px 10px;
     }
 
-    .heading p, .heading i {
+    .heading .fa-book{
+        color: var(--button);
+     }
+    
+     .heading p, .heading i {
+        display: inline-block;
         color: var(--white);
     }
     
@@ -214,10 +219,6 @@ body {
     }
     
 /*FIN HERO */
-    main {
-        padding: 15px 10px;
-    }
-
     .margin5 {
         margin: 5px 0;
     }
@@ -445,6 +446,36 @@ body {
         }
     }
 
+    @media screen and (min-width:618px) {
+        .book-categories-small {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .boxes-3 .book-categories-small-item {
+            height: 60px;
+            width: 32%;
+            display: flex;
+            align-items: center;
+        }
+
+        .boxes-4 .book-categories-small-item {
+            height: 60px;
+            width: 24%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .boxes-5 .book-categories-small-item {
+            height: 60px;
+            width: 19%;
+            display: flex;
+            align-items: center;
+        }
+    }
     /* .slider-container .slider {
         min-height: 330px;
         max-height: 430px;
