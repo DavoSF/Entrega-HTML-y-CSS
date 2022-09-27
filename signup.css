@@ -211,7 +211,7 @@ header div.contenedor .heading a img {
 body {
     height: 100vh;
     display: flex;
-    flex-flow: column nowrap; 
+    flex-flow: column nowrap;
     justify-content: space-between;
 }
 
