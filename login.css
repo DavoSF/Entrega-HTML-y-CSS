@@ -115,6 +115,9 @@ body {
     font-family: var(--tipo-principal);
     color: var(--oscuro);
     background-color: var(--claro);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 /* FIN RESET */
 
@@ -208,16 +211,10 @@ header div.contenedor .heading a img {
     font-size: var(--principal-size);
 }
 /* FIN HEADER */
-body {
-    height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-}
-
 main {
     padding: 15px 10px;
 }
+
 
 section.login {
     max-width: 600px;
