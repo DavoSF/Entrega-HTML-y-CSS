@@ -282,17 +282,17 @@ section.login a p {
     padding: 10px;
 }
 
-.footing {
+.footer .footing {
     padding: 0 5%;
 }
 
-.footing h2 {
+.footer .footing h2 {
     font-weight: bold;
     margin: 15px
     0;
 }
 
-.footing a {
+.footer .footing a {
     font-size: var(--principal-size);
     border-bottom: 1px solid var(--claro);
     line-height: 1.5em;
@@ -304,24 +304,24 @@ section.login a p {
 /* FIN FOOTER */
 
 @media only screen and (max-width: 617px) {
-    footer {
+    .footer {
         display: flex;
         flex-flow: column nowrap;
     }
 
-    footer a:not(.mobile-yes), footer h2:not(.mobile-yes) {
+    .footer a:not(.mobile-yes), footer h2:not(.mobile-yes) {
         display: none;
     }
     
-    footer .mobile-yes {
+    .footer .mobile-yes {
         display: inline;
     }
 
-    .footing p {
+    .footer .footing p {
         margin: 10px 0;
     }
 
-    .footing a {
+    .footer .footing a {
         border: none;
     }
 }
