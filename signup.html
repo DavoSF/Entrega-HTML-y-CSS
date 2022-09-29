@@ -12,8 +12,21 @@
         <header>
             <div class="contenedor">
                 <div class="heading first-div">
-                    <p>&#9776</p>
-                    <a href="./index.html">
+                    <p class="hamburguer">&#9776</p>
+                    <input type="checkbox" name="menu-check" id="menu-check">
+                    <label id="menu-label" for="menu-check">
+                        <span id="menu-open">&#9776;</span>
+                        <span id="menu-close">X</span>
+                    </label>
+                    <nav id="hamburguer-list">
+                        <ul>
+                            <li><a href="./index.html#home"><i class="fa-solid fa-house"></i> <p>Inicio</p></a></li>
+                            <li><a href="./index.html#contact-us"><i class="fa-solid fa-mug-saucer"></i> <p>Contacto</p></a></li>
+                            <li><a href="./login.html"><i class="fa-solid fa-bookmark"></i> <p>Lista de deseos</p></a></li>
+                            <li><a href="./login.html"><i class="fa-regular fa-circle-user"></i> <p>Iniciar sesión</p></a></li>
+                        </ul>
+                    </nav>
+                    <a href="./index.html#home">
                         <i class="fa-solid fa-book"> <p>NUCBRARY</p></i>
                     </a>
                     <i class="fa-solid fa-basket-shopping"></i>

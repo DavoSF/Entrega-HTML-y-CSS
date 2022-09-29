@@ -12,7 +12,21 @@
         <header>
             <div class="contenedor">
                 <div class="heading first-div">
-                    <p>&#9776</p>
+                    <p class="hamburguer">&#9776</p>
+                    <input type="checkbox" name="menu-check" id="menu-check">
+                    <label id="menu-label" for="menu-check">
+                        <span id="menu-open">&#9776;</span>
+                        <span id="menu-close">X</span>
+                    </label>
+                    <nav id="hamburguer-list">
+                        <ul>
+                            <li><a href="#home"><i class="fa-solid fa-house"></i> <p>Inicio</p></a></li>
+                            <li><a href="#contact-us"><i class="fa-solid fa-mug-saucer"></i> <p>Contacto</p></a></li>
+                            <li><a href="./login.html"><i class="fa-solid fa-bookmark"></i> <p>Lista de deseos</p></a></li>
+                            <li><a href="./login.html"><i class="fa-regular fa-circle-user"></i> <p>Iniciar sesión</p></a></li>
+                            <li><a href="#bestsellers-spanish">Más vendidos en Español</a></li>
+                        </ul>
+                    </nav>
                     <a href="#home">
                         <i class="fa-solid fa-book"> <p>NUCBRARY</p></i>
                     </a>
@@ -27,20 +41,7 @@
                 <div class="shipping">
                     <i class="fa-solid fa-shuttle-space"></i>
                     <p>ENVÍO GRATIS</p>
-                </div>
-                <!-- <input type="checkbox" name="menu-check" id="menu-check">
-                <label id="menu-label" for="menu-check">
-                    <span id="menu-open">&#9776;</span>
-                    <span id="menu-close">X</span>
-                </label>
-                <nav>
-                    <ul>
-                        <li><a href="#home"><i class="fa-solid fa-house"></i> <p>Inicio</p></a></li>
-                        <li><a href=""><i class="fa-solid fa-mug-saucer"></i> <p>Comparte</p></a></li>
-                        <li><a href=""><i class="fa-solid fa-bookmark"></i> <p>Guardado</p></a></li>
-                        <li><a href=""><i class="fa-regular fa-circle-user"></i> <p>Iniciar sesión</p></a></li>
-                    </ul>
-                </nav> -->
+                </div>        
             </div>
         </header>
         <main>
@@ -83,7 +84,7 @@
                 <img src="./images/10SEP_DISCOUNT_919.jpg" alt="">
             </section>
             <section class="book-caroussel-to-be margin5">
-                <h2>Más Vendidos en Español</h2>
+                <h2 id="bestsellers-spanish">Más Vendidos en Español</h2>
                 <div class="book-container">
                     <div class="book-presentation">
                         <div class="book-title-author">

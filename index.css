@@ -5,6 +5,7 @@
     --white: #fff;
     --negro: #403042;
     --button: #10bbd5;
+    --active-button: #50e1f4;
     --tipo-principal: Helvetica, Arial, sans-serif;
     --tipo-secundaria: Verdana;
     --principal-size: .8em;
@@ -138,7 +139,7 @@ body {
         padding: 4px 10px;
     }
 
-    .heading .fa-book{
+    .heading .fa-book {
         color: var(--button);
     }
     
@@ -193,6 +194,10 @@ body {
         color: var(--white);
     }
 
+    .contenedor .search-tool .search-bar button:hover {
+        background: var(--active-button);
+    }
+
     .contenedor .shipping {
         height: 30px;
         width: 100%;
@@ -202,6 +207,11 @@ body {
         align-items: center;
         justify-content: center;
     }
+
+    .contenedor .shipping:hover {
+        background-color: var(--active-button);
+    }
+
     .contenedor .shipping p {
         margin-left: 10px;
         font-size: var(--principal-size);
@@ -228,6 +238,7 @@ body {
         display: flex;
         justify-content: center;
     }
+
     .publicity img {
         max-height: 300px;
         max-width: 1000px;
@@ -290,6 +301,15 @@ body {
         margin-top: 20px;
     }
 
+    .book-presentation .the-basket:hover, .form-button:hover  {
+        background: var(--active-button)
+    }
+
+    section.book-categories {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
     .book-categories-items {
         height: 20%;
         display: flex;
@@ -318,8 +338,10 @@ body {
     }
 
     .book-categories-small {
+        width: 100%;
         display: flex;
-        flex-flow: column;
+        flex-flow: column nowrap;
+        justify-content: center;
         gap: 10px;
     }
 
@@ -327,6 +349,7 @@ body {
         background: var(--white);
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 15px;
     }
 
@@ -425,7 +448,83 @@ body {
     }
     /* FIN FOOTER */
 
+/* menu hamburguesa */
+    #menu-label, #menu-check, #hamburguer-list, div.first-div p.hamburguer {
+        display: none;
+    }
+/* fin menu hamburguesa */
+
     @media only screen and (max-width: 617px) {
+        div.contenedor .first-div p.hamburguer {
+            display: inline;
+            color: transparent;
+        }
+
+        #menu-check:not(:checked) ~ nav {
+            display: none;
+        }
+
+        #menu-check:checked ~ nav {
+            display: block;
+        }
+
+        #menu-label {
+            width: 20px;
+            height: 20px;
+            display: block;
+            color: var(--white);
+            background: transparent;
+            font-size: var(--principal-size);
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            padding: 2px;
+            position: absolute;
+            left: 0.5em;
+            top: 0.5em;
+            z-index: 9999;
+        }
+
+        #menu-label:hover {
+            color: var(--negro);
+            background: var(--white);
+        }
+
+        #menu-close {
+            display:none;
+        }
+
+        #menu-check:checked ~ label #menu-open {
+            display: none;
+        }
+
+        #menu-check:checked ~ label #menu-close {
+            display: block;
+        }
+
+        div.contenedor .first-div nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: var(--oscuro);
+            padding-top: 0;
+            padding-left: 2.6em;
+            padding-right: 2.6em;
+            line-height: 2.5em;
+            opacity: .9;
+            color: var(--claro);
+        }
+
+        div.contenedor nav ul a p {
+            color: var(--white);
+        }
+
+        div.contenedor nav ul, div.contenedor nav ul li {
+            display: block;
+            text-align: left;
+        }
+
         .footer {
             display: flex;
             flex-flow: column nowrap;
@@ -446,9 +545,8 @@ body {
         .footer .footing a {
             border: none;
         }
-    }
 
-    @media screen and (min-width:618px) {
+    @media only screen and (min-width:618px) {
         .boxes-4 .book-categories-item {
             height: 17%;
             max-height: 230px;
